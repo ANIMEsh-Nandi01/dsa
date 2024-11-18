@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">DSA.ANIMESH</a></div>
+            <ul class="links">
+                <li><a href="suggeston/">SUGGESTION</a></li>
+                <li><a href="sh-qu/">SH-QUESTION</a></li>
+                <li><a href="array/">ARRAY</a></li>
+                <li><a href="linked/">LINKEDLIST</a></li>
+                <li><a href="stack/">STACK</a></li>
+                <li><a href="queue/">QUEUE</a></li>
+                <li><a href="tree/">TREE</a></li>
+                <li><a href="graph/">GRAPH</a></li>
+                <li><a href="algo/">ALGO</a></li>
+                <li><a href="sorting/">SORTING</a></li>
+            </ul>
+            <a href="#" class="action_btn">Get start</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        
+        <div class="dropdown_menu">
+            <li><a href="suggeston/">SUGGESTION</a></li>
+            <li><a href="sh-qu/">SH-QUESTION</a></li>
+            <li><a href="array/">ARRAY</a></li>
+            <li><a href="linked/">LINKEDLIST</a></li>
+            <li><a href="stack/">STACK</a></li>
+            <li><a href="queue/">QUEUE</a></li>
+            <li><a href="tree/">TREE</a></li>
+            <li><a href="graph/">GRAPH</a></li>
+            <li><a href="algo/">ALGO</a></li>
+            <li><a href="sorting/">SORTING</a></li>
+            <li> <a href="#" class="action_btn">Get start</a></li>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <DIV><img src="" alt=""></DIV>
+        </section>
+    </main>
+     <!-- Download button -->
+
+     <div class="down">
+        <button class="download-button" data-file="1.jpg">Download SUGGESTION</button>
+        <button class="download-button" data-file="complexity.pdf">Download SH-QUESTRION</button>
+        <button class="download-button" data-file="complexity.pdf">Download ARRAY</button>
+        <button class="download-button" data-file="complexity.pdf">Download LINKEDLIST</button>
+        <button class="download-button" data-file="complexity.pdf">Download STACK</button>
+        <button class="download-button" data-file="complexity.pdf">Download QUEUE</button>
+        <button class="download-button" data-file="complexity.pdf">Download TREE</button>
+        <button class="download-button" data-file="complexity.pdf">Download GRAPH</button>
+        <button class="download-button" data-file="complexity.pdf">Download ALGO</button>
+        <button class="download-button" data-file="complexity.pdf">Download SORTING</button>
+    </div>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('toggle_btn i');
+        const dropdownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function() {
+            dropdownMenu.classList.toggle('open');
+            const isOpen = dropdownMenu.classList.contains('open')
+
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars';
+        }
+    </script>
+
+    
+<script>
+    // Add click event listener to all buttons
+    document.querySelectorAll('.download-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const fileName = this.dataset.file; // Get the file name from data-file attribute
+            const link = document.createElement('a');
+            link.href = fileName; // Set the file URL
+            link.download = fileName; // Set the download attribute
+            link.click(); // Trigger the download
+        });
+    });
+</script>
+
+</body>
+</html>
